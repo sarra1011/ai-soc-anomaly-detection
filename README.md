@@ -3,6 +3,16 @@
 ## 📌 Overview
 This project simulates a Security Operations Center (SOC) enhanced with machine learning to detect anomalous behavior in system logs.
 
+## 🛡️ Security Operations Center (SOC) with AI
+
+This project simulates a modern SOC environment by combining:
+
+- SIEM system (Wazuh)
+- Log analysis & detection rules
+- AI-based anomaly detection
+- Attack simulation
+- Dashboard visualization (Kibana / Grafana)
+
 ## 🧠 Architecture
 - Log ingestion (simulated logs / Wazuh)
 - Data preprocessing & feature engineering
