@@ -1,28 +1,36 @@
-# 🔐 AI-Based SOC Anomaly Detection
+# 🔐 AI-Based SOC Anomaly Detection System
 
-## 📌 Project Overview
-This project aims to design a Security Operations Center (SOC) system enhanced with Artificial Intelligence to detect anomalous activities in system logs.
+## 📌 Overview
+This project simulates a Security Operations Center (SOC) enhanced with machine learning to detect anomalous behavior in system logs.
 
-## 🎯 Objectives
-- Detect suspicious login attempts
-- Analyze log data using machine learning
-- Improve alert interpretability using AI
+## 🧠 Architecture
+- Log ingestion (simulated logs / Wazuh)
+- Data preprocessing & feature engineering
+- Anomaly detection (rule-based / ML-ready)
+- Alert generation
 
-## ⚙️ Technologies Used
-- Python
-- Wazuh (SIEM)
-- Linux
+## ⚙️ Technologies
+- Python (pandas, scikit-learn)
+- SIEM concepts (Wazuh)
+- Linux logs
 
-## 🧠 Project Structure
-- `data/` → datasets and logs
-- `src/` → source code
-- `notebooks/` → experiments and analysis
-- `logs/` → sample logs
+## 📊 Features
+- Log parsing and preprocessing
+- Suspicious login detection
+- Basic anomaly detection logic
+- Modular pipeline (extensible to ML models)
+
+## 📁 Structure
+- `src/` → core logic
+- `data/` → datasets
+- `logs/` → raw logs
+- `notebooks/` → experiments
+- `docs/` → architecture design
 
 ## 🚧 Status
-This project is currently **in progress**.
+In Progress – moving toward ML-based detection
 
-## 🔮 Future Work
-- Implement anomaly detection model
-- Integrate real-time alert system
-- Add explainable AI module
+## 🔮 Future Improvements
+- Isolation Forest / ML models
+- Real-time streaming (Kafka)
+- Dashboard (Streamlit)
