@@ -20,12 +20,46 @@ This project simulates a Security Operations Center (SOC) enhanced with machine 
 - Basic anomaly detection logic
 - Modular pipeline (extensible to ML models)
 
-## 📁 Structure
-- `src/` → core logic
-- `data/` → datasets
-- `logs/` → raw logs
-- `notebooks/` → experiments
-- `docs/` → architecture design
+## 📁 Project Structure
+
+```bash
+soc-project/
+├── README.md
+├── requirements.txt
+│
+├── data/
+│   ├── logs/
+│   ├── alerts/
+│
+├── siem/
+│   ├── wazuh_config/
+│   ├── log_parser.py
+│   ├── detection_rules.xml
+│
+├── ai_model/
+│   ├── train.py
+│   ├── anomaly_detection.py
+│   ├── feature_engineering.py
+│
+├── dashboards/
+│   ├── kibana_exports/
+│   ├── grafana_panels.json
+│
+├── simulations/
+│   ├── brute_force_attack.py
+│   ├── suspicious_login_generator.py
+│
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_anomaly_detection.ipynb
+│
+├── docs/
+│   ├── architecture.md
+│   ├── incident_response.md
+│
+└── tests/
+    ├── test_logs.py
+```
 
 ## 🚧 Status
 In Progress – moving toward ML-based detection
