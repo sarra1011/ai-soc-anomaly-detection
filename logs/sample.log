@@ -1,1 +1,5 @@
-Sample log file for testing
+timestamp,user,action,status
+10:00,user1,login,success
+10:02,user2,login,failed
+10:03,user2,login,failed
+10:04,user2,login,failed
