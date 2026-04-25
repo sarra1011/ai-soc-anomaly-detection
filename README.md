@@ -33,42 +33,35 @@ This project simulates a modern SOC environment by combining:
 ## 📁 Project Structure
 
 ```bash
-soc-project/
-├── README.md
-├── requirements.txt
+🛡️ soc-project
+├── 📄 README.md
+├── 📄 requirements.txt
 │
-├── data/
-│   ├── logs/
-│   ├── alerts/
+├── 📁 data
+│   ├── 📂 logs
+│   ├── 📂 alerts
 │
-├── siem/
-│   ├── wazuh_config/
-│   ├── log_parser.py
-│   ├── detection_rules.xml
+├── 📁 siem
+│   ├── ⚙️ wazuh_config
+│   ├── 🧾 log_parser.py
+│   ├── 🚨 detection_rules.xml
 │
-├── ai_model/
-│   ├── train.py
-│   ├── anomaly_detection.py
-│   ├── feature_engineering.py
+├── 📁 ai_model
+│   ├── 🧠 train.py
+│   ├── 🔍 anomaly_detection.py
+│   ├── 📊 feature_engineering.py
 │
-├── dashboards/
-│   ├── kibana_exports/
-│   ├── grafana_panels.json
+├── 📁 simulations
+│   ├── 💥 brute_force_attack.py
+│   ├── 👤 login_attack_simulator.py
 │
-├── simulations/
-│   ├── brute_force_attack.py
-│   ├── suspicious_login_generator.py
+├── 📁 dashboards
+│   ├── 📊 kibana_exports
+│   ├── 📈 grafana_panels.json
 │
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_anomaly_detection.ipynb
-│
-├── docs/
-│   ├── architecture.md
-│   ├── incident_response.md
-│
-└── tests/
-    ├── test_logs.py
+└── 📁 docs
+    ├── 📘 architecture.md
+    ├── 📕 incident_response.md
 ```
 
 ## 🚧 Status
