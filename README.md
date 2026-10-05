@@ -120,7 +120,7 @@ ai-soc-anomaly-detection-main/
 
 ```bash
 # Clone the repository
-git clone [https://github.com/your-username/ai-soc-anomaly-detection.git](https://github.com/your-username/ai-soc-anomaly-detection.git)
+git clone [https://github.com/sarra1011/ai-soc-anomaly-detection.git](https://github.com/your-username/ai-soc-anomaly-detection.git)
 cd ai-soc-anomaly-detection-main
 
 # Install dependencies
