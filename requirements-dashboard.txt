@@ -1,0 +1,2 @@
+# Optional: only needed for the live dashboard (src/dashboard.py)
+streamlit>=1.37
