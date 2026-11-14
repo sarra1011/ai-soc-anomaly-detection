@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" role="img" aria-label="Pipeline: auth logs are parsed into window features, scored by rules and an Isolation Forest, merged into incidents, then sent to alerts and the dashboard">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#5F7396"/>
+    </marker>
+    <style>
+      .t{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter','Helvetica Neue',Arial,sans-serif;font-size:19px;font-weight:700;fill:#E6EDF7}
+      .s{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter','Helvetica Neue',Arial,sans-serif;font-size:15px;fill:#8FA3BF}
+      .m{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;font-size:12px;letter-spacing:2px;fill:#2DD4BF}
+      .c{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace;font-size:13px;fill:#5F7396}
+      .b{fill:#111A2E;stroke:#2A3A5C;stroke-width:1.5}
+      .l{stroke:#5F7396;stroke-width:1.5;fill:none}
+    </style>
+  </defs>
+  <rect width="1280" height="400" rx="14" fill="#0B1220"/>
+
+  <!-- 1 sources -->
+  <text class="m" x="40" y="52">01 · SOURCES</text>
+  <rect class="b" x="40" y="68" width="200" height="264" rx="10"/>
+  <text class="t" x="60" y="104">Auth logs</text>
+  <text class="s" x="60" y="130">sshd + sudo lines</text>
+  <line x1="60" y1="150" x2="220" y2="150" stroke="#2A3A5C"/>
+  <text class="s" x="60" y="178">Synthetic generator</text>
+  <text class="s" x="60" y="206">Real sshd attack lab</text>
+  <text class="s" x="60" y="234">Loghub OpenSSH</text>
+  <text class="s" x="60" y="262">Live /var/log/auth.log</text>
+  <text class="c" x="60" y="310">gen_logs.py · lab/</text>
+
+  <!-- 2 features -->
+  <text class="m" x="290" y="52">02 · FEATURES</text>
+  <rect class="b" x="290" y="68" width="200" height="264" rx="10"/>
+  <text class="t" x="310" y="104">Parse + window</text>
+  <text class="s" x="310" y="130">per source, per 5 min</text>
+  <line x1="310" y1="150" x2="470" y2="150" stroke="#2A3A5C"/>
+  <text class="s" x="310" y="178">fails, accepts, sudo</text>
+  <text class="s" x="310" y="206">distinct users tried</text>
+  <text class="s" x="310" y="234">rolling 1 h and 6 h</text>
+  <text class="s" x="310" y="262">attacking IPs, 30 min</text>
+  <text class="c" x="310" y="310">parse_features.py</text>
+
+  <!-- 3 detection: two engines -->
+  <text class="m" x="540" y="52">03 · DETECTION</text>
+  <rect class="b" x="540" y="68" width="220" height="122" rx="10"/>
+  <text class="t" x="560" y="104">7 rules</text>
+  <text class="s" x="560" y="130">mapped to MITRE ATT&amp;CK</text>
+  <text class="s" x="560" y="154">precise, explainable</text>
+  <text class="c" x="560" y="176">hybrid.py</text>
+  <rect class="b" x="540" y="210" width="220" height="122" rx="10"/>
+  <text class="t" x="560" y="246">Isolation Forest</text>
+  <text class="s" x="560" y="272">unsupervised score</text>
+  <text class="s" x="560" y="296">catches what rules miss</text>
+  <text class="c" x="560" y="318">detect.py</text>
+
+  <!-- 4 incidents -->
+  <text class="m" x="810" y="52">04 · INCIDENTS</text>
+  <rect class="b" x="810" y="68" width="200" height="264" rx="10"/>
+  <text class="t" x="830" y="104">Group + rank</text>
+  <text class="s" x="830" y="130">windows → incidents</text>
+  <line x1="830" y1="150" x2="990" y2="150" stroke="#2A3A5C"/>
+  <circle cx="838" cy="174" r="6" fill="#F04438"/><text class="s" x="854" y="179">CRITICAL</text>
+  <circle cx="838" cy="204" r="6" fill="#F79009"/><text class="s" x="854" y="209">HIGH</text>
+  <circle cx="838" cy="234" r="6" fill="#98A2B3"/><text class="s" x="854" y="239">REVIEW</text>
+  <text class="s" x="830" y="270">one alert per incident</text>
+  <text class="c" x="830" y="310">hybrid.py · live.py</text>
+
+  <!-- 5 outputs -->
+  <text class="m" x="1060" y="52">05 · RESPONSE</text>
+  <rect class="b" x="1060" y="68" width="180" height="264" rx="10" stroke="#2DD4BF"/>
+  <text class="t" x="1080" y="104">Act on it</text>
+  <text class="s" x="1080" y="130">in real time</text>
+  <line x1="1080" y1="150" x2="1220" y2="150" stroke="#2A3A5C"/>
+  <text class="s" x="1080" y="178">Live dashboard</text>
+  <text class="s" x="1080" y="206">Telegram + e-mail</text>
+  <text class="s" x="1080" y="234">JSONL audit trail</text>
+  <text class="s" x="1080" y="262">Safe IP blocking</text>
+  <text class="c" x="1080" y="310">alerting.py</text>
+
+  <!-- arrows -->
+  <path class="l" d="M240 200H284" marker-end="url(#a)"/>
+  <path class="l" d="M490 200H512V129H534" marker-end="url(#a)"/>
+  <path class="l" d="M512 200V271H534" marker-end="url(#a)"/>
+  <path class="l" d="M760 129H784V200H804" marker-end="url(#a)"/>
+  <path class="l" d="M760 271H784V200"/>
+  <path class="l" d="M1010 200H1054" marker-end="url(#a)"/>
+
+  <text class="c" x="40" y="372">Labels are never used for training: they only score the result.</text>
+</svg>

@@ -57,5 +57,5 @@
 - [x] Real attacks against a real sshd (`lab/`), validation on the public Loghub OpenSSH logs, model comparison
 - [x] Live mode with alerting and automatic IP blocking
 - [ ] Wazuh integration with real logs (needs ~10 GB free disk)
-- [ ] Sequence models (LSTM / transformer on event sequences)
-- [ ] Live dashboard (Grafana / Streamlit)
+- [x] Sequence model (windowed autoencoder)
+- [x] Live dashboard (Streamlit)
